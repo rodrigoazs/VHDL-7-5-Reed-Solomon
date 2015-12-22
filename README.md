@@ -28,3 +28,5 @@ This component is essencial to be used in the Reed-Solomon Encoder and Decoder. 
 In order to test the system, the simulation of the channel was done using a pseudo random generator that will generate really long sequences of random numbers until it starts repeating. This was done using a Linear Feedback Shift Register (LFSR) which is a cascade of Flip Flops with feedback addition of random outputs that is able to generate a random output in each clock cycle.
 
 <img src="http://i.imgur.com/xVUMgaB.png">
+
+Please, read the <a href="https://github.com/rodrigoazs/-7-5-Reed-Solomon/raw/master/Report.pdf">whole project</a> to get more information about.
