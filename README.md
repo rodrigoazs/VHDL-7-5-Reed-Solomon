@@ -29,4 +29,8 @@ In order to test the system, the simulation of the channel was done using a pseu
 
 <img src="http://i.imgur.com/xVUMgaB.png">
 
+`read.txt` - Contains the binary data to be sent through the channel. Blocks of 15 bits per line.<br>
+`write_error.txt` - Contains the binary data after getting artificial errors in the channel.<br>
+`write_file.txt` - Contains the binary data after error correction.<br>
+
 Please, read the <a href="https://github.com/rodrigoazs/-7-5-Reed-Solomon/raw/master/Report.pdf">whole project</a> to get more information about.
