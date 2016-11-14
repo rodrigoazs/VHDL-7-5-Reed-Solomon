@@ -33,4 +33,24 @@ In order to test the system, the simulation of the channel was done using a pseu
 `write_error.txt` - Contains the binary data after getting artificial errors in the channel.<br>
 `write_file.txt` - Contains the binary data after error correction.<br>
 
+Using ISim (Xilinx):
+```
+isim force add {/reedsolomon/RndGen/dsa0} 010 -radix bin -cancel 1 ps<br>
+isim force add {/reedsolomon/RndGen/dsa1} 110 -radix bin -cancel 1 ps<br> 
+isim force add {/reedsolomon/RndGen/dsa2} 001 -radix bin -cancel 1 ps<br> 
+isim force add {/reedsolomon/RndGen/dsa3} 110 -radix bin -cancel 1 ps<br> 
+isim force add {/reedsolomon/RndGen/dsa4} 101 -radix bin -cancel 1 ps<br> 
+isim force add {/reedsolomon/RndGen/dsa5} 110 -radix bin -cancel 1 ps<br> 
+isim force add {/reedsolomon/RndGen/dsa6} 100 -radix bin -cancel 1 ps<br>
+isim force add {/reedsolomon/RDE/d1} 000 -radix bin -cancel 1 ps<br>
+isim force add {/reedsolomon/RDE/d2} 000 -radix bin -cancel 1 ps<br>
+isim force add {/reedsolomon/RDD/d1} 000 -radix bin -cancel 1 ps<br>
+isim force add {/reedsolomon/RDD/d2} 000 -radix bin -cancel 1 ps<br>
+ 
+isim force add {/reedsolomon/clock} 0 -radix bin -value 1 -radix bin -time 1 ps -repeat 2 ps -cancel 574 ps
+```
+The signals dsa0 to dsa6 are the seed for the Pseudo Random Number Generator block, you can start these with any random numbers of 3 bits.
+
+574 ps is the clock, try to use something like (1+number_of_bits_in_the_message/15)*14
+
 Please, read the <a href="https://github.com/rodrigoazs/-7-5-Reed-Solomon/raw/master/Report.pdf">whole project</a> to get more information about.
